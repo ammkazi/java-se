@@ -1,10 +1,18 @@
 class CurrentAccount extends Account
 {
     double interestRate;
-    public CurrentAccount(String name,int accountNumber,double balance, double interestRate) {
-        super(name,accountNumber,balance);
-        System.out.println("Sub Constructor - Current Account");
+    public CurrentAccount(String name,double balance, double interestRate) {
+        super(name,balance);
         this.interestRate = interestRate;
+    }
+    public void deposit(double amount)
+    {
+        balance = balance + amount;
+    }
+
+    public void withdraw(double amount)
+    {
+        balance = balance - amount;
     }
     public void print()
     {
